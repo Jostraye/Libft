@@ -6,7 +6,7 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 19:24:19 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/29 17:17:24 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:37:56 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int i;
-
-	i = 0;
-	if (s != '\0')
-		while (s[i])
-		{
-			f(&s[i]);
-			i++;
-		}
+	if (s == NULL || f == NULL)
+		return ;
+	while (*s)
+	{
+		f(s);
+		s++;
+	}
 }

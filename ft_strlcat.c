@@ -6,30 +6,35 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 11:48:48 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/29 17:25:30 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 20:19:21 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict str1, const char *restrict str2, size_t len)
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
+	int i;
+	int j;
+	int src_size;
+	int dst_size;
+	int space_left;
 
-	if (len == 0)
-		return (0);
 	i = 0;
-	while (str1[i] && i < len)
+	dst_size = 0;
+	space_left = size;
+	while (src[i] != '\0')
 		i++;
-	j = i;
-	while (i < len - 1)
-	{
-		str1[i] = str2[i - j];
-		i++;
-	}
-	if (i < len)
-		str1[i] = '\0';
-	i = j + ft_strlen(str2);
-	return (i);
+	src_size = i;
+	while (dst[dst_size] != '\0' && space_left-- != 0)
+		dst_size++;
+	space_left = size - dst_size;
+	if (space_left == 0)
+		return ((size_t)(size + src_size));
+	i = 0;
+	j = dst_size;
+	while (src[i] != 0 && space_left-- > 1)
+		dst[j++] = src[i++];
+	dst[j] = '\0';
+	return ((size_t)(src_size + dst_size));
 }

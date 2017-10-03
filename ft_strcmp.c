@@ -6,13 +6,13 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 15:03:36 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/29 17:10:45 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:03:20 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(char *str1, char *str2)
+int	ft_strcmp(const char *str1, const char *str2)
 {
 	int i;
 	int result;

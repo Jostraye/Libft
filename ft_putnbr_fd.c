@@ -6,7 +6,7 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 15:36:57 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/29 16:50:26 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:32:59 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
 	if (n < 0)
 	{
 		n = -n;
 		ft_putchar_fd('-', fd);
+	}
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('2', fd);
+		n %= 1000000000;
+		n = -n;
 	}
 	if (n >= 10)
 	{

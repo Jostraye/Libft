@@ -6,7 +6,7 @@
 #    By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 13:43:13 by jostraye          #+#    #+#              #
-#    Updated: 2017/09/30 23:59:28 by jostraye         ###   ########.fr        #
+#    Updated: 2017/10/02 19:19:52 by jostraye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,7 @@ SRCS = ft_memset.c \
 	   ft_isalnum.c \
 	   ft_isascii.c \
 	   ft_isprint.c \
-	   ft_isupper.c \
-	   ft_islower.c \
+	   ft_istrim.c \
 	   ft_toupper.c \
 	   ft_tolower.c \
 	   ft_memalloc.c \
@@ -72,11 +71,10 @@ SRCS = ft_memset.c \
 	   ft_lstdelone.c \
 	   ft_lstdel.c \
 	   ft_lstadd.c \
-	   ft_lstlink.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
-		 ft_compt_word.c \
-		 ft_lenght_word.c \
+		 ft_charcount.c \
+		 ft_charpackcount.c \
 
 OBJS = $(SRCS:.c=.o)
 

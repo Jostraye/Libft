@@ -6,13 +6,13 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 08:30:53 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/30 21:37:09 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:05:12 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int sum;

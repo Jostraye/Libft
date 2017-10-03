@@ -6,13 +6,13 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/22 09:22:52 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/29 15:45:17 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:00:02 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *b, size_t len)
+void	ft_bzero(void *b, size_t len)
 {
 	size_t	i;
 	char	*d;
@@ -24,5 +24,4 @@ void	*ft_bzero(void *b, size_t len)
 		d[i] = 0;
 		i++;
 	}
-	return (b);
 }

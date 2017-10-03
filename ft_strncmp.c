@@ -6,15 +6,15 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 14:30:40 by jostraye          #+#    #+#             */
-/*   Updated: 2017/09/30 22:43:31 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:04:55 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *str1, char *str2, int n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int i;
+	size_t i;
 	int result;
 
 	result = 0;

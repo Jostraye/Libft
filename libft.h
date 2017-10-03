@@ -6,7 +6,7 @@
 /*   By: jostraye <jostraye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 18:54:23 by jostraye          #+#    #+#             */
-/*   Updated: 2017/10/01 00:14:54 by jostraye         ###   ########.fr       */
+/*   Updated: 2017/10/02 20:21:50 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,13 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
-int					ft_islower(int c);
-int					ft_isupper(int c);
+//int					ft_islower(int c);
+//int					ft_isupper(int c);
+int					ft_istrim(char c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
-void				ft_bzero(void *s, size_t n);
+void				ft_bzero(void *b, size_t n);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -89,7 +90,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 
-size_t				ft_lenght_word(char const *s, char c);
-size_t				ft_compt_word(char const *s, char c);
+int				ft_charcount(char  *s, char c);
+size_t				ft_charpackcount(const char  *s, char c);
 
 #endif
